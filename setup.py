@@ -5,7 +5,7 @@ except ImportError:
     from distutils.core import setup
 
 setup(name="sql-tricks",
-      version='1.0.3',
+      version='1.0.4',
       packages=['sqltricks'],
       author='Mason Sun',
       author_email='sqxccdy@icloud.com',

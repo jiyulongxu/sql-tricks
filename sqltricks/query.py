@@ -4,7 +4,7 @@ import six
 
 
 def convert(char):
-    if isinstance(char, (str, unicode)):
+    if isinstance(char, (six.binary_type, six.text_type)):
         return "\"{}\"".format(char)
     return six.binary_type(char)
 
