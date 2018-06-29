@@ -1,4 +1,4 @@
-from config import db
+from sqltricks.config import db
 
 
 class Field(dict):
