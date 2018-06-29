@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 import logging
-import six
 
 
 class Drop(object):

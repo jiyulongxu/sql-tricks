@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 import logging
-from drop import DropTable
-import six
+from sqltricks.drop import DropTable
 
 
 class Create(object):
