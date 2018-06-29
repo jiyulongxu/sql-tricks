@@ -1,2 +1,2 @@
 # sql-tricks
-Python用~SQL语句生成戏法~
+Python用\~SQL语句生成戏法\~
