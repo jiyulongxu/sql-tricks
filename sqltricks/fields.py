@@ -4,9 +4,9 @@ from config import db
 class Field(dict):
     default = {}
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, name=None, *args, **kwargs):
         kwargs.update(self.default)
-        kwargs['name'] = '`{}`'.format(kwargs['name'])
+        kwargs['name'] = '`{}`'.format(name)
         super(Field, self).__init__(*args, **kwargs)
 
     @property
@@ -20,8 +20,8 @@ class Field(dict):
 
 
 class CharField(Field):
-    def __init__(self, num, *args, **kwargs):
-        super(CharField, self).__init__(*args, **kwargs)
+    def __init__(self, num, name=None, *args, **kwargs):
+        super(CharField, self).__init__(name=name, *args, **kwargs)
         self['type'] = self['type'] + "({})".format(num)
 
 
