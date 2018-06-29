@@ -30,5 +30,6 @@ if db == 'sqlite':
     VARCHAR = type('VARCHAR', (CharField,), {'default': {'type': 'VARCHAR'}})
     FLOAT = type('FLOAT', (Field,), {'default': {'type': 'FLOAT'}})
     DATE = type('DATE', (Field,), {'default': {'type': 'DATE'}})
+
 elif db == 'mysql':
     CHAR = type('CHAR', (dict,), {})
