@@ -1,14 +1,12 @@
 # -*- coding: utf-8 -*-
 import logging
-from drop import DropTable
-
-string = unicode
+import six
 
 
 def convert(char):
     if isinstance(char, (str, unicode)):
         return "\"{}\"".format(char)
-    return str(char)
+    return six.binary_type(char)
 
 
 class SELECT(object):

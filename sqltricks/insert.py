@@ -1,9 +1,6 @@
 # -*- coding: utf-8 -*-
 import logging
 import json
-from drop import DropTable
-
-string = unicode
 
 
 class INSERT(object):

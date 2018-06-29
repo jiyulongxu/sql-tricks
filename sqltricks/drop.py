@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 import logging
-
-string = unicode
+import six
 
 
 class Drop(object):

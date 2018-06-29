@@ -5,7 +5,7 @@ except ImportError:
     from distutils.core import setup
 
 setup(name="sql-tricks",
-      version='1.0.0',
+      version='1.0.2',
       packages=['sqltricks'],
       author='Mason Sun',
       author_email='sqxccdy@icloud.com',
@@ -13,7 +13,7 @@ setup(name="sql-tricks",
       keywords='except marker mail',
       license='Apache-2.0',
       url='https://github.com/sqxccdy/sql-tricks',
-      install_requires=[],
+      install_requires=['six'],
       classifiers=[
           'Development Status :: 1 - Planning',
           'Intended Audience :: Developers',
