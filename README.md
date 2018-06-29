@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/sqxccdy/sql-tricks.svg?branch=master)](https://travis-ci.org/sqxccdy/sql-tricks)
 # sql-tricks
 Python用\~SQL语句生成戏法\~
 又一个SQL构建的轮子呢~
