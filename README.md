@@ -66,5 +66,16 @@ SelectTable('test', '*', runner=query)(
 2018-06-29 15:58:40,062 DEBUG::::SELECT * FROM `test` WHERE name="namxce";
 2018-06-29 15:58:40,063 INFO::::Table jquery successfully
 ```
+
+#### 更新
+```python
+from sqltricks.query import *
+from sqltricks.update import *
+from sqltricks.fields import *
+
+UpdateTable('user', {'enable': 0}, runner=db.fast_exec)(Where(email='test@test.com'))
+```
+
+
 模块名字征集：模块名不甚满意，如有人有更好建议，邮件留言
 sqxccdy@icloud.com
