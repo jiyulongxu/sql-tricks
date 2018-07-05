@@ -9,6 +9,7 @@ logging.getLogger().setLevel(logging.DEBUG)
 
 
 def test_create():
+    print('run')
     assert CreateTable('test', drop=True, runner=db.conn.execute)(
         VARCHAR(128, name='name', primary_key=True, not_null=True),
         INT(name='age', not_null=True),

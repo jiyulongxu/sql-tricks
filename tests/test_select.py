@@ -9,15 +9,16 @@ logging.getLogger().setLevel(logging.DEBUG)
 
 
 def test_select():
+
     def query(sql):
         c = db.conn.cursor()
         cursor = c.execute(sql)
         for row in cursor:
             print(row)
 
-    SelectTable('test', '*', runner=query)(
+    assert SelectTable('test', '*', runner=query)(
         Where(name='namxce')
-    )
+    ) == 'SELECT * FROM `test` WHERE name="namxce";'
 
 
 

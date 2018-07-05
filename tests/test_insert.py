@@ -9,11 +9,11 @@ logging.getLogger().setLevel(logging.DEBUG)
 
 
 def test_insert():
-    InsertTable('test', runner=db.conn.execute)(
+    assert InsertTable('test', runner=db.conn.execute)(
         name='name2',
         age=32,
         money=323.2
-    )
+    ) == """INSERT INTO `test` (age,money,name) values(32, 323.2, "name2");"""
 
     db.conn.commit()
 

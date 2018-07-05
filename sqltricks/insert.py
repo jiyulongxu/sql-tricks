@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 import logging
 import json
+from collections  import OrderedDict
 
 
 class INSERT(object):
@@ -20,7 +21,7 @@ class InsertTable(INSERT):
         self.drop = drop
 
     def __call__(self, **data):
-        names, values = [i for i in zip(*data.items())]
+        names, values = [i for i in zip(*sorted(data.items(), key=lambda x:x[0]))]
         _ = " ".join((self.INSERT, "`{}`".format(self.name),
                       "(" + ",".join([name for name in names]) + ")",
                       "values({})".format(json.dumps(values)[1:-1])
